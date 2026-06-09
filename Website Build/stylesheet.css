@@ -34,6 +34,11 @@
     font-size: 27px;
    /* keep all parts in the left column */
 }
+
+.navbar{
+    font-family:  'Noto Sans Chakma', sans-serif;
+    font-size: 11px;
+}
  
 
 

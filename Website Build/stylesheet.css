@@ -36,11 +36,21 @@
 }
 
 .navbar{
+   font-size: 14px;   
+  display: flex;
+  align-items: center;
+  background: #fffdfe;
+  min-height: 52px;
+  border-radius: 8px;
+  border: 0px solid #031e39;
+  padding: 0 16px;
+  flex-wrap: wrap;
+  font-family: 'Noto Sans Chakma', sans-serif;
+  
 }
  
 a{
-    font-family:  'Noto Sans Chakma', sans-serif;
-    font-size: 11px;
+   
 }
 
 

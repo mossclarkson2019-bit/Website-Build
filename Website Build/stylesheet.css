@@ -36,21 +36,26 @@
 }
 
 .navbar{
-   font-size: 14px;   
-  display: flex;
-  align-items: center;
-  background: #fffdfe;
-  min-height: 52px;
-  border-radius: 8px;
-  border: 0px solid #031e39;
-  padding: 0 16px;
-  flex-wrap: wrap;
-  font-family: 'Noto Sans Chakma', sans-serif;
-  
+
 }
  
-a{
-   
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fffdfe;
+  display: flex;
+}
+
+.navbar ul li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  background-color: #4599fe;
 }
 
 

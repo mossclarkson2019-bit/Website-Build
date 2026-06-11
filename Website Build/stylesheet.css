@@ -1,3 +1,5 @@
+body { background-color: red !important; }
+
 /*styling header div, and setting to grid. Will contain logo, nav bar and a contrasting icon in the top right*/
 
 .parent {

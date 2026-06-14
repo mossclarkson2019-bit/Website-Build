@@ -1,6 +1,7 @@
-body {'background-color: red;
- 
-}'}
+body { background-color: #cf3f3f;
+    margin: 0;
+    padding: 0;}
+
 
 /*styling header div, and setting to grid. Will contain logo, nav bar and a contrasting icon in the top right*/
 

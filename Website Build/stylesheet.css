@@ -1,4 +1,6 @@
-body { background-color: red !important; }
+body {'background-color: red;
+ 
+}'}
 
 /*styling header div, and setting to grid. Will contain logo, nav bar and a contrasting icon in the top right*/
 
@@ -9,7 +11,7 @@ body { background-color: red !important; }
     gap: 8px;
 }
  /* header logo styling*/   
-.Header1 {
+.logo {
     grid-column: span 4 / span 4;
     font-family: "Oswald";
     font-weight: 700;

@@ -1,4 +1,9 @@
-
+body {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    
+}
 
 /*styling header div, and setting to grid. Will contain logo, nav bar and a contrasting icon in the top right*/
 
@@ -6,8 +11,9 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
-    gap: 8px;
+    gap: 0;
 }
+
 
 
 /* Global readability defaults */
@@ -42,7 +48,7 @@
     grid-column: 1;
     font-family: "Oswald";
     font-weight: 700;
-    font-size: 80%;
+    font-size: 10px;
     margin-left: -3%;
     margin-right: -4%;
    
@@ -53,7 +59,7 @@
     color: #031E49;
     font-family: "Oswald";
     font-weight: 700;
-    font-size: 80%;
+    font-size: 10px;
 
    
 }
@@ -79,7 +85,7 @@
   background-color: #4599fe; 
   left: 50%;             /* Moves the left edge to the middle of the text */
   transform: translateX(-50%); /* Shifts the line back on the x axis (horizontal) by half of its own width */
-  border-radius: 20%;     /* rounds the corners of the line */
+
 }
 
 
@@ -95,6 +101,7 @@
   justify-content: center;
   font-family: "Noto Sans Chakma";
   font-size: 80%;
+  float: center;
 }
 
 .navbar li a {
@@ -113,11 +120,16 @@
 .div2 {
     grid-column: span 4 / span 4;
     grid-column-start: 5;
+
 }
 
 .div3 {
     grid-column: span 4 / span 4;
     grid-column-start: 9;
+    float: right ;
+    align-items: top;
+  
+
 }
 
 
@@ -127,11 +139,10 @@
     grid-row: span 4 / span 4; /* double height */
     grid-row-start: 2;
     background-color: #031E49;
-    width: 115%;
+    width: 100%;
     transform: translateY(-10%);
-    float: center;
-
 }
+
 
 /* Accessibility: stronger focus indicator for keyboard users */
 .navbar li a:focus-visible,
@@ -140,6 +151,28 @@
     outline-offset: 3px;
     border-radius: 6px;
 }
+
+
+ .BMW{
+   width: 19%;
+   height: 45%;
+  
+   float: right;
+ }
+  .Mercedes{
+   width: 19%;
+   height: 45%;
+   margin-right: -0.5%;
+   float: right;
+ }
+
+    .Audi{
+    width: 45%;
+    height: 52%;
+    float: right;
+    margin-top: -2%;
+    margin-right: -2%;
+    }
 
 
 
@@ -167,15 +200,16 @@
    
 }
 
+
 .Hero {
      grid-column-start: 1;
     grid-column: span 12 / span 4;
     grid-row: span 4 / span 4; /* double height */
     grid-row-start: 2;
     background-color: #031E49;
-    width: 110%;
-    transform: translateX(-5%);
+    width: 100%;
 }
+
 
 .navbar {
   list-style-type: none;
@@ -185,7 +219,7 @@
   display: flex;
   justify-content: center;
   font-family: "Noto Sans Chakma";
-  font-size: 100%;
+  font-size: 110%;
 }
 
 .navbar li a {
@@ -215,3 +249,30 @@
   transform: translateX(-50%); /* Shifts the line back on the x axis (horizontal) by half of its own width */
   border-radius: 28%;     /* rounds the corners of the line */
  }
+
+ .BMW{
+   width: 5.5%;
+   height: 42%;
+   padding-top: 1.25%;
+  
+ }
+  .Mercedes{
+   width: 5.5%;
+   height: 42%;
+   padding-top: 1.25%;
+  
+
+ }
+
+    .Audi{
+    width: 14%;
+    height: 48%;
+    padding-top: 2.9%;
+    margin-right: -1%;
+    
+    }
+
+    .div3 {
+        
+        
+    }       

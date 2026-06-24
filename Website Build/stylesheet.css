@@ -191,17 +191,9 @@ body {
   
 }
 
-.Hero {
-    grid-column-start: 1;
-    grid-row-start: 2;
-    grid-column: span 12 / span 4;
-    grid-row: span 8 / span 8; 
-    grid-template-rows: 1;
-    grid-template-columns: repeat(2, 1fr); 
-    background-color: #031E49;
-    width: 100%;
-    height: 100%
-}
+
+
+
 
 
 .navbar {
@@ -226,7 +218,6 @@ body {
 #home-link {
     color: #4599fe; 
   position: relative;
-  text-decoration: none; /* Turn off default underline */
   display: inline-block;  /* Required to contain the pseudo-element */
 }
 
@@ -237,12 +228,17 @@ body {
   display: block;
   position: absolute;
   bottom: -10%;          /* Distance below text */
-  width: 100%;           /* Exact horizontal width (or use percentages like 50%) */
+  width: 100%;           
   height: 5%;           /* Thickness of the line */
   background-color: #4599fe; 
-  left: 50%; 
+  left: 50%;
   transform: translateX(-50%); /* Shifts the line back on the x axis (horizontal) by half of its own width */
  }
+
+
+
+
+
 
  .BMW{
    width: 5.5%;
@@ -258,7 +254,7 @@ body {
 
  }
 
-    .Audi{
+  .Audi{
     width: 14%;
     height: 48%;
     padding-top: 2.9%;
@@ -266,42 +262,80 @@ body {
     
     }
 
-    /* use of flex box for vertical stacking of the hero text was suggested by gemini summary on google, but all code was manually written*/
-    /* couldn't seem to get the text much closer together*/
-   .Hero-text {
+
+
+
+
+    .Hero {
     grid-column-start: 1;
-    display: inline-block;
-    align-items: left;
-    float: left;      
-    
+    grid-row-start: 2;
+    grid-column: span 12 / span 4;
+    grid-row: span 8 / span 8;
+
+    /* Make the hero a real 2-column grid at this breakpoint */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    align-items: center;
+    justify-items: center;
+
+    background-color: #031E49;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+
+
+
+
+    /* left hero column */
+   .Hero-text {
+    grid-column: 1;
+    display: block; 
+    /*found out from gemini (jogged memory from second html grok course) that i could not use inline-block or float effectively within a grid */
+    justify-self: start;  
+    /* aligns items to the start (left) of the cell or div, i used this as i found out from gemini search summary that float doesnt work properly within a grid as the grid placement overrides the float commands*/
    }
+
    .E39-text{
     font-family: "Oswald";
     font-size: 400%;
-    color: #fffdfe;
-    font-weight: 700;
+    color: #B8CAD1;
+    font-weight: 400;
+  }
+ 
+ 
+  /*right hero column*/
+  .Hero-image {
+    grid-column: 2;
+    display: block; 
+    justify-self: end; /* aligns the right of the right column*/
+    padding-right: 5%;
   }
 
-     .Hero-image {
-      grid-column-start: 2;
-      display: inline-block;
-      Background-color: #fffdfe;
-     }
+  .Hero-car {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+  }
 
-     .Hero-car {
-      width: 30%;
-      height: auto;}
+  .logo-part2{
+    font-family: "Oswald";
+    font-size: 400%;
+    font-weight: 700;
+    color: #fffdfe;
+    }
 
-      .logo-part2{
-        font-family: "Oswald";
-        font-size: 400%;
-        font-weight: 700;
-        color: #fffdfe;
-      }
+   .Euro2 {
+    font-family: "Oswald";
+    font-size: 400%;
+    font-weight: 700;
+    color: #4599fe;
+    }
 
-       .Euro2 {
-        font-family: "Oswald";
-        font-size: 400%;
-        font-weight: 700;
-        color: #4599fe;
-       }
+    
+
+    

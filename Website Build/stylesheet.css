@@ -193,14 +193,14 @@ body {
 
 .Hero {
     grid-column-start: 1;
+    grid-row-start: 2;
     grid-column: span 12 / span 4;
     grid-row: span 8 / span 8; 
-    grid-template-rows: repeat(1, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    grid-row-start: 2;
+    grid-template-rows: 1;
+    grid-template-columns: repeat(2, 1fr); 
     background-color: #031E49;
     width: 100%;
-    min-height: 100%
+    height: 100%
 }
 
 
@@ -269,47 +269,39 @@ body {
     /* use of flex box for vertical stacking of the hero text was suggested by gemini summary on google, but all code was manually written*/
     /* couldn't seem to get the text much closer together*/
    .Hero-text {
-    justify-content: flex-start;
-    grid-column: 1;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+    grid-column-start: 1;
+    display: inline-block;
     align-items: left;
+    float: left;      
     
    }
-  
-    .Euro2  {
-      font-family: "Oswald";
-      font-weight: 700;
-      color: #4599fe;
-      font-size: 400%;
-   
-    }
-
-    .logo-part2 {
-      font-family: "Oswald";
-      font-weight: 600;
-      color: #fffdfe;
-      font-size: 400%;
-  
-    
-    }
-     .logo-part3 {
-      font-family: "Oswald";
-      font-weight: 700;
-      color: #fffdfe;
-      font-size: 400%;
-     
-     }
+   .E39-text{
+    font-family: "Oswald";
+    font-size: 400%;
+    color: #fffdfe;
+    font-weight: 700;
+  }
 
      .Hero-image {
-      grid-column: 2;
-      grid-row: 1;
-      width: 50%;
-      display: flex;
+      grid-column-start: 2;
+      display: inline-block;
       Background-color: #fffdfe;
      }
 
      .Hero-car {
       width: 30%;
       height: auto;}
+
+      .logo-part2{
+        font-family: "Oswald";
+        font-size: 400%;
+        font-weight: 700;
+        color: #fffdfe;
+      }
+
+       .Euro2 {
+        font-family: "Oswald";
+        font-size: 400%;
+        font-weight: 700;
+        color: #4599fe;
+       }

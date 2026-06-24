@@ -267,13 +267,16 @@ body {
     
     }
 
+    /* use of flex box for vertical stacking of the hero text was suggested by gemini summary on google, but all code was manually written*/
+    /* couldn't seem to get the text much closer together*/
    .Hero-text {
+    justify-content: flex-start;
     grid-column: 1;
     display: flex;
     flex-direction: column;
     align-items: left;
     margin-left: 2%;
-    row-gap: -20px;
+    
    }
   
     .Euro2  {
@@ -281,6 +284,7 @@ body {
       font-weight: 700;
       color: #4599fe;
       font-size: 400%;
+   
     }
 
     .logo-part2 {
@@ -288,6 +292,7 @@ body {
       font-weight: 600;
       color: #fffdfe;
       font-size: 400%;
+  
     
     }
      .logo-part3 {
@@ -295,7 +300,5 @@ body {
       font-weight: 700;
       color: #fffdfe;
       font-size: 400%;
+     
      }
-
-
-

@@ -192,7 +192,6 @@ body {
 }
 
 .Hero {
-
     grid-column-start: 1;
     grid-column: span 12 / span 4;
     grid-row: span 8 / span 8; 
@@ -272,10 +271,10 @@ body {
    .Hero-text {
     justify-content: flex-start;
     grid-column: 1;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: left;
-    margin-left: 2%;
     
    }
   
@@ -302,3 +301,15 @@ body {
       font-size: 400%;
      
      }
+
+     .Hero-image {
+      grid-column: 2;
+      grid-row: 1;
+      width: 50%;
+      display: flex;
+      Background-color: #fffdfe;
+     }
+
+     .Hero-car {
+      width: 30%;
+      height: auto;}

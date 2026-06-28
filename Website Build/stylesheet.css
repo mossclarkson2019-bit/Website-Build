@@ -358,7 +358,7 @@ body {
       font-family: "Noto Sans Chakma";
       color: #B8CAD1;
       place-self: start end;
-      min-width: 30em;
+      min-width: 30em; /*using em for the first time (relates to the size of a character - 1em = 1 character), allows for better scaling*/
       
     
     }
@@ -368,12 +368,13 @@ body {
 
     #hero-car-label {
       display: flex;
+      margin: 1%;
       font-family: "Noto Sans Chakma";
       color: #B8CAD1;
       font-size: 80%;
       font-weight: 200;
       justify-self: center;
-      letter-spacing: 0.09em; /*using em for the first time (relates to the size of a character - 1em = 1 character), allows for better scaling*/
+      letter-spacing: 0.09em; 
       opacity: 0.75; /*did have as a % but according to a stack overflow user and corroberated by gemini this should to be switched to a decimal as some browsers have inconsistant support across versions so for maximal support and safety i switched to a decimal*/
  
     }
@@ -381,15 +382,30 @@ body {
  
 
 
-     /* the band of stats e.g. 1,242 parts in stock, that will be clickable buttons to the page they link to*/
-    .clickable-info-band {
-      grid-row-start: 12;
-      grid-column-start: 1;
-      grid-row: span 2;
-      grid-column: span 12;
-      
-      margin: 0;
+     
+    
+
+    #shop-info-card {
+      display: block;
+      grid-row: span 17 / span 19;
+      grid-column: span 1 / span 6;
+      min-height: 100%;
+      border: 2px solid red;
+      background-color:#031E49;
+      max-width: 50%;
 
     }
+
+    
+    #forum-info-card {
+      display: block;
+      grid-row: span 17 / span 19;
+      grid-column: span 7 / span 12;
+      min-height: 100%;
+      max-width: 50%;
+      background-color: #4599fe;
+
+    }
+
 
 }

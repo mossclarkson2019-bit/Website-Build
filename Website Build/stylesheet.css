@@ -140,20 +140,20 @@ body {
 
 
  .bmw{
-   width: 19%;
+   width: auto;
    height: 45%;
   
    float: right;
  }
   .mercedes{
-   width: 19%;
+   width: auto;
    height: 45%;
    margin-right: -0.5%;
    float: right;
  }
 
     .audi{
-    width: 45%;
+    width: auto;
     height: 52%;
     float: right;
     margin-top: -2%;
@@ -272,7 +272,7 @@ body {
     .hero {
     grid-column-start: 1;
     grid-row-start: 2;
-    grid-column: span 12 / span 4;
+    grid-column: span 12;
     grid-row: span 8;
 
     /* attempting a 3 column setup*/
@@ -375,37 +375,243 @@ body {
       font-weight: 200;
       justify-self: center;
       letter-spacing: 0.09em; 
-      opacity: 0.75; /*did have as a % but according to a stack overflow user and corroberated by gemini this should to be switched to a decimal as some browsers have inconsistant support across versions so for maximal support and safety i switched to a decimal*/
+      opacity: 0.75; 
+      /*did have as a % but according to a stack overflow user and corroberated by gemini this should to be switched to a decimal as some browsers have inconsistant support across versions so for maximal support and safety i switched to a decimal*/
  
     }
 
  
 
 
-     
+    #clickable-info-card {
+      display: grid; 
+      grid-row: span 2;
+      grid-column: 1 / span 12;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      margin: 0;
+      column-gap: 1;
+      
+
+    }
     
 
-    #shop-info-card {
-      display: block;
-      grid-row: span 17 / span 19;
-      grid-column: span 1 / span 6;
-      min-height: 100%;
-      border: 2px solid red;
-      background-color:#031E49;
-      max-width: 50%;
-
-    }
+    
 
     
     #forum-info-card {
-      display: block;
-      grid-row: span 17 / span 19;
-      grid-column: span 7 / span 12;
-      min-height: 100%;
-      max-width: 50%;
-      background-color: #4599fe;
+      display: inline-block;
+      position: relative;
+      grid-row-start: 1;
+      grid-column-start: 2;
+      grid-row: 1;
+      grid-column: 1;
+      height: 100%;
+      max-width: 100%;
+      min-width: 100%;
+      border: 1px solid #B8CAD1;
+      
 
     }
+
+    #forum-metric{
+       display: inline-block;
+      font-family: "Oswald";
+      font-weight: 900;
+      font-size: 300%;
+      text-decoration: none;
+      color: #031E49;
+      margin-left: 8%;
+
+    }
+
+
+    #members{
+      display: inline-block;
+      font-family: "Oswald";
+      font-weight: 300;
+      font-size: 150%;
+      color: #B8CAD1;  
+    }
+
+    #forum-metric-under{
+      display: inline-block;
+      font-family: "Oswald";
+      font-weight: 300;
+      font-size: 150%; 
+      color: #B8CAD1; 
+      margin-left: 8%;
+
+    }
+
+    /* fancy animated underline using psuedo element, i got the idea to do this from Mrs Sales as she questioned what the lines on the mockup were (AI slop) and suggested they could be remodeled as animated undrline hover states */
+   #forum-info-card::after {
+    content: '';   /* used my learning about a psuedo element underline from the navbar to do the basic psuedo element tweaking*/
+    position: absolute;
+    width: 90%; /* had to tweak as i initially had set to 100% but realized that this meant it would still ignore padding, so had to reduce to 80% to give a gap either side of the line, then */
+    height: 2px;
+    bottom: 5% ; /* bottom sets the distance from the bottom of the text or div its attached to, witht he higher the value, the higher it is on the page, i tweaked the from 0% to 2% as 0 left it inlien with the border, but 2% was still too close so i chose 5% as it fit the gap between the bottom text and the div border well*/
+    left: 5%;  /* i tweaked this and the paddiing on the div a couple times to now make them different so that the line extends past the text on the left as i though this both looked better and more closely resembled my mockup at the same time*/
+    background-color: #4599fe;
+    transform: scaleX(0); /* used AI to learn that i needed to use a scale rule on the X axis to get it to animate a line*/
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out; /* this was origionally set to 0.25s as that is what the brave AI used as an example as to explain how the use of of scaling transitions, but this was far too quick and i felt 0.75s was too sluggish bu 0.5s felt like a good middle ground*/
+}
+   /* hover state to set the extended posistion*/
+  #forum-info-card:hover::after {
+   transform: scaleX(1); /* the extended posistion of the line*/
+   transform-origin: bottom left; /* telling the line to origionate from the bottom left corner of its container / what its set to go after*/
+}
+
+    #shop-info-card {
+      display: inline-block;
+      position: relative;
+      grid-row-start: 1;
+      grid-column-start: 1;
+      grid-row: 1;
+      grid-column: 1;
+      height: 100%;
+      max-width: 100%;
+      min-width: 100%;
+      border: 1px solid #B8CAD1;
+      
+      
+
+    }
+
+    #shop-metric{
+       display: inline-block;
+      font-family: "Oswald";
+      font-weight: 900;
+      font-size: 300%;
+      text-decoration: none;
+      color: #031E49;
+      margin-left: 8%;
+
+    }
+
+
+    #parts{
+      display: inline-block;
+      font-family: "Oswald";
+      font-weight: 300;
+      font-size: 150%;
+      color: #B8CAD1;  
+    }
+
+    #shop-metric-under{
+      display: inline-block;
+      font-family: "Oswald";
+      font-weight: 300;
+      font-size: 150%; 
+      color: #B8CAD1; 
+      margin-left: 8%;
+
+    }
+
+    /* fancy animated underline using psuedo element, i got the idea to do this from Mrs Sales as she questioned what the lines on the mockup were (AI slop) and suggested they could be remodeled as animated undrline hover states */
+   #shop-info-card::after {
+    content: '';   /* used my learning about a psuedo element underline from the navbar to do the basic psuedo element tweaking*/
+    position: absolute;
+    width: 90%; /* had to tweak as i initially had set to 100% but realized that this meant it would still ignore padding, so had to reduce to 80% to give a gap either side of the line*/
+    height: 2px;
+    bottom: 5% ; /* bottom sets the distance from the bottom of the text or div its attached to, witht he higher the value, the higher it is on the page, i tweaked the from 0% to 2% as 0 left it inlien with the border, but 2% was still too close so i chose 5% as it fit the gap between the bottom text and the div border well*/
+    left: 5%;  /* i tweaked this and the paddiing on the div a couple times to now make them different so that the line extends past the text on the left as i though this both looked better and more closely resembled my mockup at the same time*/
+    background-color: #4599fe;
+    transform: scaleX(0); /* used AI to learn that i needed to use a scale rule on the X axis to get it to animate a line*/
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out; /* this was origionally set to 0.25s as that is what the brave AI used as an example as to explain how the use of of scaling transitions, but this was far too quick and i felt 0.75s was too sluggish bu 0.5s felt like a good middle ground*/
+}
+   /* hover state to set the extended posistion*/
+   #shop-info-card:hover::after {
+   transform: scaleX(1); 
+   transform-origin: bottom left; 
+   }
+
+
+
+
+
+
+    a{
+      text-decoration: none; /* setting the text dec to none as when i first put in the text it refused to not underline and text decorating the text itself did nothing*/
+    }
+
+    #test1-info-card {
+      display: inline-block;
+      position: relative;
+      grid-row-start: 1;
+      grid-column-start: 3;
+      grid-row: 1;
+      grid-column: 1;
+      height: 100%;
+      max-width: 100%;
+      min-width: 100%;
+      border: 1px solid #B8CAD1;
+      
+      
+
+    }
+
+    /* fancy animated underline using psuedo element, i got the idea to do this from Mrs Sales as she questioned what the lines on the mockup were (AI slop) and suggested they could be remodeled as animated undrline hover states */
+   #test1-info-card::after {
+    content: '';   /* used my learning about a psuedo element underline from the navbar to do the basic psuedo element tweaking*/
+    position: absolute;
+    width: 90%; /* had to tweak as i initially had set to 100% but realized that this meant it would still ignore padding, so had to reduce to 80% to give a gap either side of the line*/
+    height: 2px;
+    bottom: 5% ; /* bottom sets the distance from the bottom of the text or div its attached to, witht he higher the value, the higher it is on the page, i tweaked the from 0% to 2% as 0 left it inlien with the border, but 2% was still too close so i chose 5% as it fit the gap between the bottom text and the div border well*/
+    left: 5%;  /* i tweaked this and the paddiing on the div a couple times to now make them different so that the line extends past the text on the left as i though this both looked better and more closely resembled my mockup at the same time*/
+    background-color: #4599fe;
+    transform: scaleX(0); /* used AI to learn that i needed to use a scale rule on the X axis to get it to animate a line*/
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out; /* this was origionally set to 0.25s as that is what the brave AI used as an example as to explain how the use of of scaling transitions, but this was far too quick and i felt 0.75s was too sluggish bu 0.5s felt like a good middle ground*/
+}
+   /* hover state to set the extended posistion*/
+   #test1-info-card:hover::after {
+   transform: scaleX(1); 
+   transform-origin: bottom left; 
+   }
+
+
+
+
+
+
+
+    #test2-info-card {
+      display: inline-block;
+      position: relative;
+      grid-row-start: 1;
+      grid-column-start: 1;
+      grid-row: 1;
+      grid-column: 4;
+      height: 100%;
+      max-width: 100%;
+      min-width: 100%;
+      border: 1px solid #B8CAD1;
+    
+      
+
+    }
+
+        /* fancy animated underline using psuedo element, i got the idea to do this from Mrs Sales as she questioned what the lines on the mockup were (AI slop) and suggested they could be remodeled as animated undrline hover states */
+   #test2-info-card::after {
+    content: '';   /* used my learning about a psuedo element underline from the navbar to do the basic psuedo element tweaking*/
+    position: absolute;
+    width: 90%; /* had to tweak as i initially had set to 100% but realized that this meant it would still ignore padding, so had to reduce to 80% to give a gap either side of the line*/
+    height: 2px;
+    bottom: 5% ; /* bottom sets the distance from the bottom of the text or div its attached to, witht he higher the value, the higher it is on the page, i tweaked the from 0% to 2% as 0 left it inlien with the border, but 2% was still too close so i chose 5% as it fit the gap between the bottom text and the div border well*/
+    left: 5%;  /* i tweaked this and the paddiing on the div a couple times to now make them different so that the line extends past the text on the left as i though this both looked better and more closely resembled my mockup at the same time*/
+    background-color: #4599fe;
+    transform: scaleX(0); /* used AI to learn that i needed to use a scale rule on the X axis to get it to animate a line*/
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out; /* this was origionally set to 0.25s as that is what the brave AI used as an example as to explain how the use of of scaling transitions, but this was far too quick and i felt 0.75s was too sluggish bu 0.5s felt like a good middle ground*/
+}
+   /* hover state to set the extended posistion*/
+   #test2-info-card:hover::after {
+   transform: scaleX(1); 
+   transform-origin: bottom left; 
+   }
 
 
 }

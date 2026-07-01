@@ -631,11 +631,38 @@ body {
     transform: scaleX(1); 
     transform-origin: bottom left; 
     }
-   #feat-forum{
-
+    
+   #feat-forums{ /* the div wouldnt wasnt displaying any css rules, i then discovered that i had missed the s at the end of the id in the html, so i added it and it now works*/
+   display: grid;
+   grid-column: 1 / span 12;
+   grid-row: 12 / span 4;
+   min-width: 100%;
+   border: 2px solid red;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: 1fr;
 
    }
+   
+   
+   #feat-forum1{
+    grid-column: 1;
+    grid-row: 1;
+   }
 
+   #feat-forum2{
+    grid-column: 2;
+    grid-row: 1;
+   }
+ 
+   #feat-forum3{
+    grid-column: 3;
+    grid-row: 1;
+   }
+
+   #feat-forum4{
+    grid-column: 4;
+    grid-row: 1;
+   }
    #feat-parts{
 
    }

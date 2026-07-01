@@ -15,9 +15,9 @@ body {
 }
 
 /* Make vertical scrolling natural on all devices */
-.parent { 
+/* .parent { 
     min-height: 100svh;
-}
+} */
 
 
 
@@ -165,11 +165,12 @@ body {
 
   
 
-    @media (min-width: 768px) { /* Adjust for larger screens */
+@media (min-width: 768px) { /* Adjust for larger screens */
  .parent{
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(30, 1fr);
+        grid-template-rows: repeat(24, auto);
  }
+
        
       
 .euro  {
@@ -491,6 +492,7 @@ body {
       border: 1px solid #B8CAD1;
       
       
+      
 
     }
 
@@ -521,6 +523,7 @@ body {
       font-size: 150%; 
       color: #B8CAD1; 
       margin-left: 8%;
+      margin-bottom: 3%;
 
     }
 
@@ -630,10 +633,13 @@ body {
     }
    #feat-forum{
 
+
    }
 
    #feat-parts{
 
    }
 
+
+   
 }

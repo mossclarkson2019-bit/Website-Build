@@ -352,15 +352,30 @@ body {
     }
     
     .home-blurb {
-      display: flex;
+      display: inline-block;
       grid-column: 1;
       margin-top: 10%;
       font-family: "Noto Sans Chakma";
       color: #B8CAD1;
       place-self: start end;
       min-width: 30em; /*using em for the first time (relates to the size of a character - 1em = 1 character), allows for better scaling*/
-      
+      font-size: 100%;
+      font-weight: 100;
+
+      opacity: 0.75;
     
+    }
+
+    .home-blurb::after{
+      content:"";
+      display: block;
+      position: relative;
+      bottom: -20px;
+      width: 100%;
+      height:0.5px;
+      background-color: #B8CAD1;
+      opacity: 0.75;
+
     }
 
 
@@ -517,7 +532,7 @@ body {
     height: 2px;
     bottom: 5% ; /* bottom sets the distance from the bottom of the text or div its attached to, witht he higher the value, the higher it is on the page, i tweaked the from 0% to 2% as 0 left it inlien with the border, but 2% was still too close so i chose 5% as it fit the gap between the bottom text and the div border well*/
     left: 5%;  /* i tweaked this and the paddiing on the div a couple times to now make them different so that the line extends past the text on the left as i though this both looked better and more closely resembled my mockup at the same time*/
-    background-color: #4599fe;
+    background-color: #EE0404;
     transform: scaleX(0); /* used AI to learn that i needed to use a scale rule on the X axis to get it to animate a line*/
     transform-origin: bottom right;
     transition: transform 0.5s ease-out; /* this was origionally set to 0.25s as that is what the brave AI used as an example as to explain how the use of of scaling transitions, but this was far too quick and i felt 0.75s was too sluggish bu 0.5s felt like a good middle ground*/
@@ -561,7 +576,7 @@ body {
     height: 2px;
     bottom: 5% ; /* bottom sets the distance from the bottom of the text or div its attached to, witht he higher the value, the higher it is on the page, i tweaked the from 0% to 2% as 0 left it inlien with the border, but 2% was still too close so i chose 5% as it fit the gap between the bottom text and the div border well*/
     left: 5%;  /* i tweaked this and the paddiing on the div a couple times to now make them different so that the line extends past the text on the left as i though this both looked better and more closely resembled my mockup at the same time*/
-    background-color: #4599fe;
+    background-color: #2F539B;
     transform: scaleX(0); /* used AI to learn that i needed to use a scale rule on the X axis to get it to animate a line*/
     transform-origin: bottom right;
     transition: transform 0.5s ease-out; /* this was origionally set to 0.25s as that is what the brave AI used as an example as to explain how the use of of scaling transitions, but this was far too quick and i felt 0.75s was too sluggish bu 0.5s felt like a good middle ground*/
@@ -602,16 +617,23 @@ body {
     height: 2px;
     bottom: 5% ; /* bottom sets the distance from the bottom of the text or div its attached to, witht he higher the value, the higher it is on the page, i tweaked the from 0% to 2% as 0 left it inlien with the border, but 2% was still too close so i chose 5% as it fit the gap between the bottom text and the div border well*/
     left: 5%;  /* i tweaked this and the paddiing on the div a couple times to now make them different so that the line extends past the text on the left as i though this both looked better and more closely resembled my mockup at the same time*/
-    background-color: #4599fe;
+    background-color: #2D4046;
     transform: scaleX(0); /* used AI to learn that i needed to use a scale rule on the X axis to get it to animate a line*/
     transform-origin: bottom right;
     transition: transform 0.5s ease-out; /* this was origionally set to 0.25s as that is what the brave AI used as an example as to explain how the use of of scaling transitions, but this was far too quick and i felt 0.75s was too sluggish bu 0.5s felt like a good middle ground*/
 }
-   /* hover state to set the extended posistion*/
-   #test2-info-card:hover::after {
-   transform: scaleX(1); 
-   transform-origin: bottom left; 
+
+    /* hover state to set the extended posistion*/
+    #test2-info-card:hover::after {
+    transform: scaleX(1); 
+    transform-origin: bottom left; 
+    }
+   #feat-forum{
+
    }
 
+   #feat-parts{
+
+   }
 
 }

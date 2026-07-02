@@ -634,110 +634,133 @@ body {
     transform-origin: bottom left; 
     }
     
-   #feat-forums{ /* the div wouldnt wasnt displaying any css rules, i then discovered that i had missed the s at the end of the id in the html, so i added it and it now works*/
-   display: grid;
-   grid-column: 1 / span 12;
-   grid-row: 12 / span 4;
-   min-width: 100%;
+   
+   
+   
+   
   
-   grid-template-columns: repeat(4, 1fr);
-   grid-template-rows: 1, auto;
-   padding: 0%;
-
-
-   }
-   
-   
-   #feat-forum1{
-    grid-column: 1;
-    grid-row: 1;
-    display: grid;
-    grid-template-columns: repeat(3, auto); /* auto allows the coumns to change size, i needs this as i need them to contain randomly sized items while being copy and pasteable for the rest of the forums*/
-    border: 2px solid #B8CAD1;
-  }
 
 
 
 
 
 
-
-
-  /* i remade the feat forum structure using flex as the use of a grid did not allow me to get the proximity i want between items without extreme difficulty*/
-   #forum-feat-2{
-    grid-column: 2;
-    grid-row: 1;
-    display: grid;
-    align-items: start;
-    gap: 0%;
-    grid-template-columns: auto 80%;
-    grid-template-rows: 33% 67%;
-    padding: 2%;
-    padding-right: 20%;
-    border: 2px solid #B8CAD1;
-    row-gap: 0%;
-    
-
-   }
-
-
-   #forum-feat-2-pfp-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 1;
-    grid-row: 1 / span 2;
-   
-   }
-
-   .thread-pfp{
-    display: inline-block;
-    width: 90%;
-    height: auto;
-    margin: 1%;
-   
-    }
-     
-    .thread-pfp::before{
-      content: "";
-      position: relative;
-      display: block;
-      bottom: 0;
-      height: 100%;
-      width: 4px;
-      background-color: #EE0405;
-    }
-
-
-
-   #forum-feat-2-text-div{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    margin-left: 2%;
-    gap: 0%;
-   }
-
-  #forum-feat-2-title{
-    display: flex;
-    font-family: "Oswald";
-    text-transform: uppercase;
-    
+/*all grids in featured parts section modified css grid genenerator*/
+/* rebuilt the entire structure of the featured forums section i wasnt happy with what i had and any time i would add something it would break the rest of the grid
+ so i restarted with this in mind, and have made it much cleaner and more of a modular design that can be copy, pasted and modified over time.
+ this would also future proof the website for down the line dev work*/
  
-  }
 
-  #forum-feat-2-details{
-    display: flex;
-    font-family: "Oswald";
-    font-size: 70%;
-    
-    
+
   
+#feat-forums{
+  grid-column: span 12 / span 12;
+  grid-row: 12 / span 2;
+
+    display: grid;
+    grid-template-columns: repeat(13, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 8px;
+
+    background-color: #f0f1f4;/* had set to blue temporarily in between commits, but this didnt look right. so i took this lighter grey from my mockup feature parts to create a deeper background feeling compared 
+    to white to highlight the forums but without being a jaring amount of contrast*/
+    padding-top: 2%; /* this padding creates a larger gap at the top and bottom for the background to show. later these can be made 1, multi value padding element to lighten up on code*/
+    padding-bottom: 2%;
+   
+}
+
+/*i am very happy witht the new styling and padding and its closer resemblance with how i wanted it and the mockup. but the alignments of the text needs fixed and the before elements need added in again. small details would also be a huge benefit*/
     
-  }
+#forum-feat-1 {
+    display: grid;
+    grid-column: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 2;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px;
+
+    background-color: #fffdfe; 
+    border-radius: 0.5em;
+  
+}
+
+#forum-feat-1-pfp-div{
+grid-row: span 3 / span 3;
+place-items: center;
+padding: 15%; 
+}
+
+
+#forum-feat-1-text-div{
+grid-column: span 4 / span 4;
+grid-row: span 3 / span 3;
+}
+
+#forum-feat-1-title{
+font-family: "Oswald";
+font-weight: 500;
+font-size: 130%;
+text-transform: uppercase;
+place-self: top start;
+}
+
+#forum-feat-1-details{
+  font-family: "Oswald";
+  font-weight: 300;
+  place-self: bottom center;
+}
+
+
+
+
+
+
+#forum-feat-2{
+    display: grid;
+    grid-column: span 3 / span 3;
+    grid-column-start: 6;
+    grid-row-start: 2;
+    
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px;
+
+    background-color: #fffdfe;
+    border-radius: 0.5em;
+ 
+}
+
+
+#forum-feat-2-pfp-div{
+grid-row: span 3 / span 3;
+place-items: center;
+padding: 15%;
+}
+
+.thread-pfp{
+height:auto;
+width: 80%;
+}
+
+#forum-feat-2-text-div{
+grid-column: span 4 / span 4;
+grid-row: span 3 / span 3;
+}
+
+#forum-feat-2-title{
+font-family: "Oswald";
+font-weight: 500;
+font-size: 130%;
+text-transform: uppercase;
+}
+
+#forum-feat-2-details{
+  font-family: "Oswald";
+  font-weight: 300;
+  
+}
 
 
 
@@ -745,20 +768,49 @@ body {
 
 
 
-  #feat-forum3{
-    grid-column: 3;
-    grid-row: 1;
-    border: 2px solid #B8CAD1;
-   }
 
-   #feat-forum4{
-    grid-column: 4;
-    grid-row: 1;
-    border: 2px solid #B8CAD1;
-   }
-   #feat-parts{
 
-   }
+#forum-feat-3{ 
+  display: grid;
+    grid-column: span 3 / span 3;
+    grid-column-start: 10;
+    grid-row-start: 2;
+
+       
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 0px;
+
+    background-color: #fffdfe;
+    border-radius: 0.5em;
+    
+}
+    
+        
+#forum-feat-3-pfp-div{
+grid-row: span 3 / span 3;
+place-items: center;
+padding: 15%;
+}
+
+#forum-feat-3-text-div{
+grid-column: span 4 / span 4;
+grid-row: span 3 / span 3;
+}
+
+#forum-feat-3-title{
+font-family: "Oswald";
+font-weight: 500;
+font-size: 130%;
+text-transform: uppercase;
+}
+
+#forum-feat-3-details{
+  font-family: "Oswald";
+  font-weight: 300;
+  justify-self: end;
+}
+
  
 
 

@@ -583,7 +583,9 @@ body {
     transform: scaleX(0); /* used AI to learn that i needed to use a scale rule on the X axis to get it to animate a line*/
     transform-origin: bottom right;
     transition: transform 0.5s ease-out; /* this was origionally set to 0.25s as that is what the brave AI used as an example as to explain how the use of of scaling transitions, but this was far too quick and i felt 0.75s was too sluggish bu 0.5s felt like a good middle ground*/
-}
+   }
+
+
    /* hover state to set the extended posistion*/
    #test1-info-card:hover::after {
    transform: scaleX(1); 
@@ -637,9 +639,11 @@ body {
    grid-column: 1 / span 12;
    grid-row: 12 / span 4;
    min-width: 100%;
-   border: 2px solid red;
+  
    grid-template-columns: repeat(4, 1fr);
-   grid-template-rows: 1fr;
+   grid-template-rows: 1, auto;
+   padding: 0%;
+
 
    }
    
@@ -647,26 +651,118 @@ body {
    #feat-forum1{
     grid-column: 1;
     grid-row: 1;
-   }
+    display: grid;
+    grid-template-columns: repeat(3, auto); /* auto allows the coumns to change size, i needs this as i need them to contain randomly sized items while being copy and pasteable for the rest of the forums*/
+    border: 2px solid #B8CAD1;
+  }
 
-   #feat-forum2{
+
+
+
+
+
+
+
+  /* i remade the feat forum structure using flex as the use of a grid did not allow me to get the proximity i want between items without extreme difficulty*/
+   #forum-feat-2{
     grid-column: 2;
     grid-row: 1;
+    display: grid;
+    align-items: start;
+    gap: 0%;
+    grid-template-columns: auto 80%;
+    grid-template-rows: 33% 67%;
+    padding: 2%;
+    padding-right: 20%;
+    border: 2px solid #B8CAD1;
+    row-gap: 0%;
+    
+
    }
+
+
+   #forum-feat-2-pfp-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+   
+   }
+
+   .thread-pfp{
+    display: inline-block;
+    width: 90%;
+    height: auto;
+    margin: 1%;
+   
+    }
+     
+    .thread-pfp::before{
+      content: "";
+      position: relative;
+      display: block;
+      bottom: 0;
+      height: 100%;
+      width: 4px;
+      background-color: #EE0405;
+    }
+
+
+
+   #forum-feat-2-text-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    margin-left: 2%;
+    gap: 0%;
+   }
+
+  #forum-feat-2-title{
+    display: flex;
+    font-family: "Oswald";
+    text-transform: uppercase;
+    
  
-   #feat-forum3{
+  }
+
+  #forum-feat-2-details{
+    display: flex;
+    font-family: "Oswald";
+    font-size: 70%;
+    
+    
+  
+    
+  }
+
+
+
+
+
+
+
+  #feat-forum3{
     grid-column: 3;
     grid-row: 1;
+    border: 2px solid #B8CAD1;
    }
 
    #feat-forum4{
     grid-column: 4;
     grid-row: 1;
+    border: 2px solid #B8CAD1;
    }
    #feat-parts{
 
    }
+ 
 
 
-   
+
+
+
 }

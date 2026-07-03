@@ -862,10 +862,78 @@ place-self: end start;
  
 
 #feat-parts{
-  grid-row: 14 / span 4 ;
-  grid-column: 1 / span 12;
-  background-color: #031E49;
-  min-height: 100px;
+  grid-column: span 12 / span 12;
+  grid-row: 14 / span 4;
+
+    display: grid;
+    grid-template-columns: repeat(13, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 8px;
+
+    background-color: #f0f1f4;/* had set to blue temporarily in between commits, but this didnt look right. so i took this lighter grey from my mockup feature parts to create a deeper background feeling compared 
+    to white to highlight the forums but without being a jaring amount of contrast*/
+    padding-top: 2%; /* this padding creates a larger gap at the top and bottom for the background to show. later these can be made 1, multi value padding element to lighten up on code*/
+    padding-bottom: 2%;
+    border: 2px #031E49 solid;
+}
+/*part card grids sourced from css grid generator*/
+#feat-part-1{
+   grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    background-color: #fffdfe;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 8px;
+
+}
+
+.part-img{
+   grid-column: span 5 / span 5;
+    grid-row: span 8 / span 8;
+}
+
+#part-info{
+    grid-column: span 5 / span 5;
+    grid-row: span 4 / span 4;
+    grid-row-start: 9;
+}
+
+
+
+
+
+
+
+
+
+
+
+#feat-part-2{
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 5;
+    grid-row-start: 2;
+    background-color: #fffdfe;
+}
+
+#feat-part-3{
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 8;
+    grid-row-start: 2;
+     background-color: #fffdfe;
+}
+
+#feat-part-4{
+  grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 11;
+    grid-row-start: 2;
+    background-color: #fffdfe;
 }
 
 

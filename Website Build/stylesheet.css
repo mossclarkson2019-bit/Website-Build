@@ -685,10 +685,56 @@ body {
 
     background-color: #fffdfe; 
     border-radius: 0.5em;
-
-    max-height: fit-content;
   
 }
+
+#forum-feat-1-pfp-div{
+display: grid;
+grid-row: span 3 / span 3;
+place-items: center start;
+
+}
+
+
+#forum-feat-1-text-div{
+grid-column: span 4 / span 4;
+grid-row: span 3 / span 3;
+display: grid;
+padding: 2%;
+
+}
+
+#forum-feat-1-title{
+display: block;
+font-family: "Oswald";
+font-weight: 500;
+font-size: 130%;
+text-transform: uppercase;
+place-self: end start;
+}
+
+#forum-feat-1-details{
+  display: block;
+  font-family: "Oswald";
+  font-weight: 300;
+  font-size: 90%; /* font size turned out to be too large in test so made smaller*/
+  place-self: end start;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #forum-feat-2{
@@ -703,10 +749,61 @@ body {
 
     background-color: #fffdfe;
     border-radius: 0.5em;
-
-    
  
 }
+
+
+#forum-feat-2-pfp-div{
+display: grid;
+grid-row: span 3 / span 3;
+place-items: center start;
+
+}
+
+.thread-pfp{
+display: grid;
+height:auto;
+width: 4em;
+margin: 0%;
+padding: 10%;
+
+
+
+}
+
+#forum-feat-2-text-div{
+grid-column: span 4 / span 4;
+grid-row: span 3 / span 3;
+display: grid;
+padding: 2%;
+
+}
+
+#forum-feat-2-title{
+ display: block;
+font-family: "Oswald";
+font-weight: 500;
+font-size: 130%;
+text-transform: uppercase;
+place-self: end start;
+}
+
+#forum-feat-2-details{
+ display: block;
+  font-family: "Oswald";
+  font-weight: 300;
+  font-size: 90%; 
+  place-self: end start;
+  
+}
+
+
+
+
+
+
+
+
 
 #forum-feat-3{ 
   display: grid;
@@ -721,24 +818,19 @@ body {
 
     background-color: #fffdfe;
     border-radius: 0.5em;
-
-    max-height: fit-content;
 }
     
-
-.thread-pfp{
+        
+#forum-feat-3-pfp-div{
 display: grid;
-height:auto;
-width: 4em;
-margin: 0%;
-padding: 10%;
-
+position: relative;
+grid-row: span 3 / span 3;
+place-items: center start;
 
 
 }
 
-
-.forum-feat-text-div{
+#forum-feat-3-text-div{
 grid-column: span 4 / span 4;
 grid-row: span 3 / span 3;
 display: grid;
@@ -747,7 +839,7 @@ padding: 2%;
 
 }
 
-.forum-feat-title{
+#forum-feat-3-title{
 display: block;
 font-family: "Oswald";
 font-weight: 500;
@@ -757,7 +849,7 @@ place-self: end start;
 
 }
 
-.forum-feat-details{
+#forum-feat-3-details{
   display: block;
   font-family: "Oswald";
   font-weight: 300;

@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     width: auto;
+    overflow-y:scroll;
+    overflow-x: hidden;
     
 }
 
@@ -25,7 +27,6 @@ body {
 .logo {
     grid-column: span 4 / span 4;
     padding-left: 2%;
-    border: 2px solid red;
     padding-bottom: 0%;
     margin-left: 0%;
     align-items: center;
@@ -93,7 +94,7 @@ body {
   font-family: "Noto Sans Chakma";
   font-size: 80%;
   float: center;
-  border: 2px solid red;
+  
 }
 
 .navbar li a {
@@ -120,7 +121,7 @@ body {
     grid-column-start: 9;
     float: right ;
     align-items: top;
-    border: 2px solid red;
+    
   }
 
 
@@ -535,7 +536,7 @@ body {
     height: 2px;
     bottom: 5% ; /* bottom sets the distance from the bottom of the text or div its attached to, witht he higher the value, the higher it is on the page, i tweaked the from 0% to 2% as 0 left it inlien with the border, but 2% was still too close so i chose 5% as it fit the gap between the bottom text and the div border well*/
     left: 5%;  /* i tweaked this and the paddiing on the div a couple times to now make them different so that the line extends past the text on the left as i though this both looked better and more closely resembled my mockup at the same time*/
-    background-color: #EE0404;
+    background-color: #ee0405;
     transform: scaleX(0); /* used AI to learn that i needed to use a scale rule on the X axis to get it to animate a line*/
     transform-origin: bottom right;
     transition: transform 0.5s ease-out; /* this was origionally set to 0.25s as that is what the brave AI used as an example as to explain how the use of of scaling transitions, but this was far too quick and i felt 0.75s was too sluggish bu 0.5s felt like a good middle ground*/
@@ -677,7 +678,7 @@ body {
     grid-column-start: 2;
     grid-row-start: 2;
 
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, auto); /* had set to 1fr but switched to auto to allow the pfp divs to fit around image to reduce the excess gap between the pfp and text*/
     grid-template-rows: repeat(3, 1fr);
     gap: 0px;
 
@@ -687,30 +688,48 @@ body {
 }
 
 #forum-feat-1-pfp-div{
+display: grid;
 grid-row: span 3 / span 3;
-place-items: center;
-padding: 15%; 
+place-items: center start;
+
 }
 
 
 #forum-feat-1-text-div{
 grid-column: span 4 / span 4;
 grid-row: span 3 / span 3;
+display: grid;
+padding: 2%;
+
 }
 
 #forum-feat-1-title{
+display: block;
 font-family: "Oswald";
 font-weight: 500;
 font-size: 130%;
 text-transform: uppercase;
-place-self: top start;
+place-self: end start;
 }
 
 #forum-feat-1-details{
+  display: block;
   font-family: "Oswald";
   font-weight: 300;
-  place-self: bottom center;
+  font-size: 90%; /* font size turned out to be too large in test so made smaller*/
+  place-self: end start;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -723,7 +742,7 @@ place-self: top start;
     grid-column-start: 6;
     grid-row-start: 2;
     
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, auto);
     grid-template-rows: repeat(3, 1fr);
     gap: 0px;
 
@@ -734,31 +753,46 @@ place-self: top start;
 
 
 #forum-feat-2-pfp-div{
+display: grid;
 grid-row: span 3 / span 3;
-place-items: center;
-padding: 15%;
+place-items: center start;
+
 }
 
 .thread-pfp{
+display: grid;
 height:auto;
-width: 80%;
+width: 4em;
+margin: 0%;
+padding: 10%;
+
+
+
 }
 
 #forum-feat-2-text-div{
 grid-column: span 4 / span 4;
 grid-row: span 3 / span 3;
+display: grid;
+padding: 2%;
+
 }
 
 #forum-feat-2-title{
+ display: block;
 font-family: "Oswald";
 font-weight: 500;
 font-size: 130%;
 text-transform: uppercase;
+place-self: end start;
 }
 
 #forum-feat-2-details{
+ display: block;
   font-family: "Oswald";
   font-weight: 300;
+  font-size: 90%; 
+  place-self: end start;
   
 }
 
@@ -777,43 +811,62 @@ text-transform: uppercase;
     grid-row-start: 2;
 
        
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, auto);
     grid-template-rows: repeat(1, 1fr);
     gap: 0px;
 
     background-color: #fffdfe;
     border-radius: 0.5em;
-    
 }
     
         
 #forum-feat-3-pfp-div{
+display: grid;
+position: relative;
 grid-row: span 3 / span 3;
-place-items: center;
-padding: 15%;
+place-items: center start;
+
+
 }
 
 #forum-feat-3-text-div{
 grid-column: span 4 / span 4;
 grid-row: span 3 / span 3;
+display: grid;
+padding: 2%;
+
+
 }
 
 #forum-feat-3-title{
+display: block;
 font-family: "Oswald";
 font-weight: 500;
 font-size: 130%;
 text-transform: uppercase;
+place-self: end start;
+
 }
 
 #forum-feat-3-details{
+  display: block;
   font-family: "Oswald";
   font-weight: 300;
-  justify-self: end;
+  font-size: 90%;
+  place-self: end start;
+
+ 
+  
 }
 
  
 
-
+#feat-parts{
+  grid-row: 14 / span 4 ;
+  grid-column: 1 / span 12;
+  background-color: #031E49;
+  min-height: 100px;
+}
 
 
 

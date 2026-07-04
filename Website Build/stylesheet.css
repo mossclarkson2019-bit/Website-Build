@@ -776,7 +776,37 @@ place-self: end start;
 
 
 
+#section-title-1{
+  display: inline-block;
+  position: relative;  
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  place-items: start start;
+  min-height: 100%;
+  padding-left: 2%;
 
+}
+
+#title-text-1{
+  display: inline-block;
+  position: relative;
+  font-family: "Oswald";
+  color: #2D4046;
+  font-size: 130%;
+  
+  
+}
+
+#section-title-1::after{
+  content: ""; 
+  position: absolute;
+  top: 57.5%; /* 50% set it to high for my liking and 60% was too low so i swapped to 57.5%*/
+  left: 9em; /* had set to a percentage, but it would merge with the text hen scaling, so i switched to em to give a consistent gap that scaled with the text*/
+  background-color:#2D4046;
+  height: 2px;
+  width: 90vw; /* gives padding on right edge, although it doesnt scale properly for now as neither em, % or vw would give a right side gap when zooming*/
+
+}
 
 
 
@@ -797,10 +827,10 @@ place-self: end start;
 
     background-color: #f0f1f4;/* had set to blue temporarily in between commits, but this didnt look right. so i took this lighter grey from my mockup feature parts to create a deeper background feeling compared 
     to white to highlight the forums but without being a jaring amount of contrast*/
-    padding-top: 2%; /* this padding creates a larger gap at the top and bottom for the background to show. later these can be made 1, multi value padding element to lighten up on code*/
+    padding-top: 0%; /* padding no longer needed as it stops title from aligning to top and the title servers to expand gap anyway*/
     padding-bottom: 2%;
-    border: 2px #031E49 solid;
-    justify-items: center;
+    
+    
 }
 /*part card grids sourced from css grid generator*/
 #feat-part-1{
@@ -808,49 +838,118 @@ place-self: end start;
    grid-row: 2;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(12, 1fr);
     gap: 8px;
 
     background: #fffdfe;
     max-width: fit-content;
+    border:1px solid #B8CAD1;
+    justify-self: center;        
 }
 
-  .part-img {
+  #feat-part-2{
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 5;
+    grid-row-start: 2;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 8px;
+
+    background-color: #fffdfe;
+     max-width: fit-content;
+     border:1px solid #B8CAD1;
+     justify-self: center;   
+}
+
+#feat-part-3{
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 8;
+    grid-row-start: 2;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 8px;
+
+     background-color: #fffdfe;
+    max-width: fit-content;
+    border:1px solid #B8CAD1;
+    justify-self: center;   
+}
+
+#feat-part-4{
+  grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 11;
+    grid-row-start: 2;
+    background-color: #fffdfe;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 8px;
+
+   max-width: fit-content;
+   border:1px solid #B8CAD1;
+   justify-self: center;   
+}
+
+
+
+
+
+.part-img {
   position: relative;
   display: inline-block;
-  width: 300px; /* Adjust to match your image size */
-  height: 200px; 
+
+  height: 100%;
+  width: 100%;
+
   grid-column: span 4 / span 4;
   grid-row: span 8 / span 8;
   place-self: center;
+  border: 1px solid #B8CAD1;
+  
+
+  
 }
 
 /* Make both images stack directly on top of each other */
 .part-img img { /* used ai to find i could select both images (but just the images) in the div by selecting the image container and folowing it with the img selector*/
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
-  justify-self: center;
+  align-self: center;
+  justify-self: end;
+  margin-top: 0%;
 }
 
 /* initially hide the hover image */
 .part-img .hover-img {
   opacity: 0;
-  transition: opacity 0.3s ease-in-out; /* creates a smooth fade effect */
+  transition: opacity 0.5s ease-in-out; /*  */
 }
 
 /* fade in the hover image when mouse hovers over the container */
 .part-img:hover .hover-img {
   opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  
+};
 }
+
 
 .part-img:hover .cover-img{
   opacity: 0;
+  
 }
+
 
 .part-text{
     grid-column: span 4 / span 4;
@@ -861,7 +960,8 @@ place-self: end start;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
 
-    place-items: center;
+    justify-items: center;
+    padding: 0em 1em .5em 1em;
 
 }
 
@@ -869,51 +969,38 @@ place-self: end start;
   grid-column: span 4 / span 4;
   font-family: "Oswald";
   text-transform: uppercase;
+  font-size: 120%;
   font-weight: 500;
+  align-self: start;
 }
 
 .part-info{
-   grid-column: span 4 / span 4;
+    display: grid;
+    grid-column: span 4 / span 4;
     grid-row: span 2 / span 2;
     grid-row-start: 2;
 }
-
-
-
-
-
-
-
-
-
-#feat-part-2{
-    grid-column: span 2 / span 2;
-    grid-row: span 2 / span 2;
-    grid-column-start: 5;
-    grid-row-start: 2;
-    background-color: #fffdfe;
-     max-width: fit-content;
+.price{
+  font-family: "Oswald";
+  font-size: 120%;
+  font-weight: 500;
+  justify-self: center;
 }
 
-#feat-part-3{
-    grid-column: span 2 / span 2;
-    grid-row: span 2 / span 2;
-    grid-column-start: 8;
-    grid-row-start: 2;
-     background-color: #fffdfe;
-    max-width: fit-content;
-}
+.cart-button{
+  display: grid;    
+  border:2px solid #ee0405; 
+  background:#ee040540 ; 
+  padding: 2%;
+  min-width: 5em;
+  justify-content: center;
+  color: #ee0405;
+  font-family: "Oswald";
+  text-transform: uppercase;
+  align-content: end;
 
-#feat-part-4{
-  grid-column: span 2 / span 2;
-    grid-row: span 2 / span 2;
-    grid-column-start: 11;
-    grid-row-start: 2;
-    background-color: #fffdfe;
-   max-width: fit-content;
-   border: 2px solid #;
+  
 }
 
 
 
-}

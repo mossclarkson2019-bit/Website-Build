@@ -1,19 +1,20 @@
-body {
-    margin: 0;
+
+body{
+  margin: 0;
     padding: 0;
     width: auto;
     overflow-y:scroll;
     overflow-x: hidden;
-    
 }
-
 /*styling header div, and setting to grid. Will contain logo, nav bar and a contrasting icon in the top right*/
 
-.parent {
+#body-grid-1 {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
     gap: 0;
+
+    
 }
 
 
@@ -114,7 +115,7 @@ header{
 }
 
 .navbar li a:hover {
-  color: #031E49;
+  color: #4599fe;
   
 }
 
@@ -174,7 +175,7 @@ header{
   
 
 @media (min-width: 768px) { /* Adjust for larger screens */
- .parent{
+ #body-grid-1{
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(24, auto);
@@ -681,7 +682,7 @@ header{
 }
 
 
-#section-title-2{
+.section-title{
  display: inline-block;
   position: relative;  
   grid-column: 1 / span 3;
@@ -691,7 +692,7 @@ header{
   padding-left: 2%; 
 }
 
-#title-text-2{
+.title-text{
   display: inline-block;
   position: relative;
   font-family: "Oswald";
@@ -699,6 +700,15 @@ header{
   font-size: 130%;
 }
 
+.section-title::after{
+  content: ""; 
+  position: absolute;
+  top: 57.5%; /* 50% set it to high for my liking and 60% was too low so i swapped to 57.5%*/
+  left: 9em; /* had set to a percentage, but it would merge with the text hen scaling, so i switched to em to give a consistent gap that scaled with the text*/
+  background-color:#2D4046;
+  height: 2px;
+  width: 90vw; /* gives padding on right edge, although it doesnt scale properly for now as neither em, % or vw would give a right side gap when zooming*/
+}
 
 
 /*i am very happy witht the new styling and padding and its closer resemblance with how i wanted it and the mockup. but the alignments of the text needs fixed and the before elements need added in again. small details would also be a huge benefit*/
@@ -803,37 +813,9 @@ place-self: end start;
 
 
 
-#section-title-1{
-  display: inline-block;
-  position: relative;  
-  grid-column: 1 / span 3;
-  grid-row: 1;
-  place-items: start start;
-  min-height: 100%;
-  padding-left: 2%;
 
-}
 
-#title-text-1{
-  display: inline-block;
-  position: relative;
-  font-family: "Oswald";
-  color: #2D4046;
-  font-size: 130%;
-  
-  
-}
 
-#section-title-1::after{
-  content: ""; 
-  position: absolute;
-  top: 57.5%; /* 50% set it to high for my liking and 60% was too low so i swapped to 57.5%*/
-  left: 9em; /* had set to a percentage, but it would merge with the text hen scaling, so i switched to em to give a consistent gap that scaled with the text*/
-  background-color:#2D4046;
-  height: 2px;
-  width: 90vw; /* gives padding on right edge, although it doesnt scale properly for now as neither em, % or vw would give a right side gap when zooming*/
-
-}
 
 
 

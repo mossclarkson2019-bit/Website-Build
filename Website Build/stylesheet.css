@@ -1,6 +1,6 @@
 
 body{
-  margin: 0;
+    margin: 0;
     padding: 0;
     width: auto;
     overflow-y:scroll;
@@ -175,7 +175,7 @@ header{
   
 
 @media (min-width: 768px) { /* Adjust for larger screens */
- #body-grid-1{
+ #body-grid-2{
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(24, auto);
@@ -231,7 +231,7 @@ header{
 
 
 #highlight-link {
-    color: #4599fe; 
+  color: #4599fe; 
   position: relative;
   display: inline-block;  /* Required to contain the pseudo-element */
 }
@@ -1030,3 +1030,474 @@ footer{
    
 }
 
+
+
+.body-grid-shop {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    margin: 0;
+    padding: 0;
+}
+    
+
+.hero-2 {
+    grid-column: span 8 / span 8;
+    grid-row: span 2 / span 2;
+    grid-row-start: 2;
+}
+
+#filters {
+    grid-column: 1 / span 2;
+    grid-row: span 8 / span 8;
+    grid-row-start: 4;
+    background-color: #fffdfe;
+}
+
+#shop-listings {
+   grid-column: span 7 / span 7;
+    grid-row: span 8 / span 8;
+    grid-column-start: 3;
+    grid-row-start: 4;
+
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 8px;
+
+    border: 2px sold red;
+}
+
+/*
+.listing-1{
+  grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+   max-width: fit-content;
+   max-height: fit-content;
+   border: 1px solid #B8CAD1;
+   justify-self: center;   
+   padding: 0;
+   margin: 0;
+}
+
+.listing-2{
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 4;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+   max-width: fit-content;
+   max-height: fit-content;
+   border: 1px solid #B8CAD1;
+   justify-self: center;   
+   padding: 0;
+   margin: 0;
+}
+
+.listing-3{
+   grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 7;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+   max-width: fit-content;
+   max-height: fit-content;
+   border: 1px solid #B8CAD1;
+   justify-self: center;   
+   padding: 0;
+   margin: 0;
+}
+
+.listing-4{
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 10;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+   max-width: fit-content;
+   max-height: fit-content;
+   border: 1px solid #B8CAD1;
+   justify-self: center;   
+   padding: 0;
+   margin: 0;
+}
+
+.listing-5{
+   grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-row-start: 4;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+   max-width: 100%;
+   max-height: 100%;
+   border: 1px solid #B8CAD1;
+   justify-self: center;   
+   padding: 0;
+   margin: 0;
+}
+
+.listing-6{
+   grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 4;
+    grid-row-start: 4;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+   max-width: fit-content;
+   max-height: fit-content;
+   border: 1px solid #B8CAD1;
+   justify-self: center;   
+   padding: 0;
+   margin: 0;
+}
+
+.listing-7{
+   grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 7;
+    grid-row-start: 4;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+   max-width: fit-content;
+   max-height: fit-content;
+   border: 1px solid #B8CAD1;
+   justify-self: center;   
+   padding: 0;
+   margin: 0;
+}
+
+.listing-8{
+   grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 10;
+    grid-row-start: 4;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+   max-width: fit-content;
+   max-height: fit-content;
+   border: 1px solid #B8CAD1;
+   justify-self: center;   
+   padding: 0;
+   margin: 0;
+}
+*/
+
+
+#footer-1{
+   grid-row: 12 / span 1;
+   grid-column: 1 / span 8;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-template-rows: 1;
+  background-color: #031E49;
+}
+
+
+
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 8px;
+}
+    
+.div7 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+ 
+   border: 1px solid #B8CAD1;
+   padding: 0;
+   margin: 0;
+}
+
+.div8 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 4;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+ 
+   border: 1px solid #B8CAD1;
+   padding: 0;
+   margin: 0;
+}
+
+.div9 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 7;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+ 
+   border: 1px solid #B8CAD1;
+   padding: 0;
+   margin: 0;
+}
+
+.div10 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 10;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+ 
+   border: 1px solid #B8CAD1;
+   padding: 0;
+   margin: 0;
+}
+
+.div11 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-row-start: 4;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+ 
+   border: 1px solid #B8CAD1;
+   padding: 0;
+   margin: 0;
+}
+
+.div12 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 4;
+    grid-row-start: 4;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+ 
+   border: 1px solid #B8CAD1;
+   padding: 0;
+   margin: 0;
+}
+
+.div13 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 7;
+    grid-row-start: 4;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+ 
+   border: 1px solid #B8CAD1;
+   padding: 0;
+   margin: 0;
+}
+
+.div14 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 10;
+    grid-row-start: 4;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+ 
+   border: 1px solid #B8CAD1;
+   padding: 0;
+   margin: 0;
+}
+
+.div15 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-row-start: 7;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+ 
+   border: 1px solid #B8CAD1;
+   padding: 0;
+   margin: 0;
+}
+
+.div16 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 4;
+    grid-row-start: 7;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+ 
+   border: 1px solid #B8CAD1;
+   padding: 0;
+   margin: 0;
+}
+
+.div17 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 7;
+    grid-row-start: 7;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+ 
+   border: 1px solid #B8CAD1;
+   padding: 0;
+   margin: 0;
+}
+
+.div18 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 10;
+    grid-row-start: 7;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+ 
+   border: 1px solid #B8CAD1;
+   padding: 0;
+   margin: 0;
+}
+
+.div19 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-row-start: 10;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+ 
+   border: 1px solid #B8CAD1;
+   padding: 0;
+   margin: 0;
+}
+
+.div20 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 4;
+    grid-row-start: 10;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+ 
+   border: 1px solid #B8CAD1;
+   padding: 0;
+   margin: 0;
+}
+
+.div21 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 7;
+    grid-row-start: 10;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+ 
+   border: 1px solid #B8CAD1;
+   padding: 0;
+   margin: 0;
+}
+
+.div22 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 10;
+    grid-row-start: 10;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 0px;
+
+ 
+   border: 1px solid #B8CAD1;
+   padding: 0;
+   margin: 0;
+}

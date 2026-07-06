@@ -803,7 +803,7 @@ text-transform: uppercase;
 
 
 
- /* featured part cards on home page*/
+ /* featured part cards on home page, currently not right at all, messed up last minute, meant to (and at one point did) look like the part page*/
 
 #feat-parts{
   grid-column: span 12 / span 12;
@@ -1021,27 +1021,7 @@ text-transform: uppercase;
 
 
  
-  
-  
 
-.listing-1,
-.listing-2,
-.listing-3,
-.listing-4,
-.listing-5,
-.listing-6,
-.listing-7,
-.listing-8,
-.listing-9,
-.listing-10,
-.listing-11,
-.listing-12,
-.listing-13,
-.listing-14,
-.listing-15,
-.listing-16{
-  position: relative;  /*putting position: relative; into every div would waste css and s i foumd out i could select them all with commas like this*/
-}
 
 footer{
   grid-row: 20;

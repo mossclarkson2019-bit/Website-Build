@@ -356,7 +356,7 @@ header{
     /* small subtext for above the logo in the hero*/
     .hero-eyebrow {
       font-family: "Noto Sans Chakma";
-      font-size: small;
+      font-size: small; /*this font size fits perfect even though its not specific*/
       color: #4599fe;
       text-transform: uppercase;
       padding-left: 1%;
@@ -372,7 +372,7 @@ header{
       color: #B8CAD1;
       place-self: start end;
       min-width: 30em; /*using em for the first time (relates to the size of a character - 1em = 1 character), allows for better scaling*/
-      font-size: 100%;
+      font-size: 90%; /* keeping consistant across all pages*/
       font-weight: 100;
 
       opacity: 0.75;
@@ -847,6 +847,7 @@ place-self: end start;
    grid-row: 2;
 
     display: grid;
+    position: relative; /* neededd for add to cart tow look right */
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(12, 1fr);
     gap: 8px;
@@ -854,7 +855,8 @@ place-self: end start;
     background: #fffdfe;
     max-width: fit-content;
     border:1px solid #B8CAD1;
-    justify-self: center;        
+    justify-self: center;   
+    max-height: 26em;     
 }
 
   #feat-part-2{
@@ -864,6 +866,7 @@ place-self: end start;
     grid-row-start: 2;
 
     display: grid;
+    position: relative; /* neededd for add to cart tow look right */
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(12, 1fr);
     gap: 8px;
@@ -871,7 +874,8 @@ place-self: end start;
     background-color: #fffdfe;
      max-width: fit-content;
      border:1px solid #B8CAD1;
-     justify-self: center;   
+     justify-self: center; 
+      max-height: 26em;  
 }
 
 #feat-part-3{
@@ -881,6 +885,7 @@ place-self: end start;
     grid-row-start: 2;
 
     display: grid;
+    position: relative; /* neededd for add to cart tow look right */
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(12, 1fr);
     gap: 8px;
@@ -889,7 +894,7 @@ place-self: end start;
     max-width: fit-content;
     border:1px solid #B8CAD1;
     justify-self: center;   
-}
+    max-height: 26em; }
 
 #feat-part-4{
   grid-column: span 2 / span 2;
@@ -899,13 +904,17 @@ place-self: end start;
     background-color: #fffdfe;
 
     display: grid;
+    position: relative; /* neededd for add to cart tow look right */
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(12, 1fr);
     gap: 8px;
 
    max-width: fit-content;
+   max-height: fit-content;
    border:1px solid #B8CAD1;
-   justify-self: center;   
+   justify-self: center; 
+   max-height: 26em; 
+
 }
 
 
@@ -932,7 +941,7 @@ place-self: end start;
 .part-img img { /* used ai to find i could select both images (but just the images) in the div by selecting the image container and folowing it with the img selector*/
   position: absolute;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   align-self: center;
   justify-self: end;
@@ -950,7 +959,7 @@ place-self: end start;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
   
-};
+
 }
 
 
@@ -970,7 +979,9 @@ place-self: end start;
     grid-template-rows: repeat(3, 1fr);
 
     justify-items: center;
-    padding: 0em 1em .5em 1em;
+    padding: 0em 1em 2em 1em;
+    width: 20em;
+    height: 7em;
 
 }
 
@@ -997,22 +1008,51 @@ place-self: end start;
 }
 
 .cart-button{
-  display: grid;    
-  border:2px solid #ee0405; 
-  background:#ee040540 ; 
+  display: flex;
+  border:2px solid #ee0405;
+  background:#ee040540 ;
   padding: 2%;
-  min-width: 5em;
   justify-content: center;
   color: #ee0405;
   font-family: "Oswald";
   text-transform: uppercase;
-  align-content: end;
+  justify-self:center;
+  align-self: bottom;
+  position: absolute;
+  bottom: 1em; /* worked through 1 million ideas to get the gap to the bottom of the shop cards consistent regardless of the text and tried using position absolute several times. But i found that if i canged the parts to relative it became normal size as it was before, 
+  i then set a bottom property (which was putting it up the top before the parts were relative) and the button now is a specific distance from the bottom of the div*/ 
+ 
+}
+ 
 
+
+ 
   
+  
+}
+
+.listing-1,
+.listing-2,
+.listing-3,
+.listing-4,
+.listing-5,
+.listing-6,
+.listing-7,
+.listing-8,
+.listing-9,
+.listing-10,
+.listing-11,
+.listing-12,
+.listing-13,
+.listing-14,
+.listing-15,
+.listing-16{
+  position: relative;  /* could not be bothered putting position: relative; into every div and gemini said i could select them all with commas like this*/
 }
 
 footer{
   grid-row: 20;
+
   grid-column: 1 / span 12;
   display:grid;
   grid-template-columns:repeat(3, 1fr);
@@ -1030,24 +1070,88 @@ footer{
    
 }
 
-
+/* grid modified from css grid generator*/
 
 .body-grid-shop {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(12, auto);
     margin: 0;
     padding: 0;
 }
+
+
+
+
+
     
 
 .hero-2 {
+    display: grid;
     grid-column: span 8 / span 8;
     grid-row: span 2 / span 2;
     grid-row-start: 2;
+    background-color:#031E49;
+    padding:1%;
+    margin: 0%;
+
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+
+    
 }
 
-#filters {
+.shop-hero-eyebrow {
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    font-family: "Noto Sans Chakma";
+      font-size: small;
+      color: #4599fe;
+      text-transform: uppercase;
+    
+}
+
+.shop-title {
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 3;
+    font-family: "Oswald";
+    color:#fffdfe;
+    font-weight: 700;
+    font-size: 350%; /* all sizes from 500% up were to big and any below were too small, so i settled with 350% with uppercase. it also looks more professional*/
+    text-transform: uppercase;
+}
+
+.shop-blurb {
+    grid-column: 1 / span 4;
+    grid-row: 5 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 5;
+    font-family: "Noto Sans Chakma";
+    font-family: "Noto Sans Chakma";
+    color: #B8CAD1;
+    place-self: start end;
+    min-width: 30em; /*using em for the first time (relates to the size of a character - 1em = 1 character), allows for better scaling*/
+    font-size: 90%; /* want to keep consistant across all pages and 100% was too big for this smaller hero so will change the other heros to 90%*/
+    font-weight: 100;
+
+      opacity: 0.75;
+}
+
+.part-num {
+    grid-column: span 4 / span 4;
+    grid-row: span 3 / span 3;
+    grid-column-start: 9;
+    grid-row-start: 4;
+}
+
+
+
+
+
+
+
+.filters {
     grid-column: 1 / span 2;
     grid-row: span 8 / span 8;
     grid-row-start: 4;
@@ -1064,158 +1168,12 @@ footer{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
-    gap: 8px;
+    gap: 0px;
 
     border: 2px sold red;
 }
 
-/*
-.listing-1{
-  grid-column: span 3 / span 3;
-    grid-row: span 3 / span 3;
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    gap: 0px;
-
-   max-width: fit-content;
-   max-height: fit-content;
-   border: 1px solid #B8CAD1;
-   justify-self: center;   
-   padding: 0;
-   margin: 0;
-}
-
-.listing-2{
-    grid-column: span 3 / span 3;
-    grid-row: span 3 / span 3;
-    grid-column-start: 4;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    gap: 0px;
-
-   max-width: fit-content;
-   max-height: fit-content;
-   border: 1px solid #B8CAD1;
-   justify-self: center;   
-   padding: 0;
-   margin: 0;
-}
-
-.listing-3{
-   grid-column: span 3 / span 3;
-    grid-row: span 3 / span 3;
-    grid-column-start: 7;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    gap: 0px;
-
-   max-width: fit-content;
-   max-height: fit-content;
-   border: 1px solid #B8CAD1;
-   justify-self: center;   
-   padding: 0;
-   margin: 0;
-}
-
-.listing-4{
-    grid-column: span 3 / span 3;
-    grid-row: span 3 / span 3;
-    grid-column-start: 10;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    gap: 0px;
-
-   max-width: fit-content;
-   max-height: fit-content;
-   border: 1px solid #B8CAD1;
-   justify-self: center;   
-   padding: 0;
-   margin: 0;
-}
-
-.listing-5{
-   grid-column: span 3 / span 3;
-    grid-row: span 3 / span 3;
-    grid-row-start: 4;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    gap: 0px;
-
-   max-width: 100%;
-   max-height: 100%;
-   border: 1px solid #B8CAD1;
-   justify-self: center;   
-   padding: 0;
-   margin: 0;
-}
-
-.listing-6{
-   grid-column: span 3 / span 3;
-    grid-row: span 3 / span 3;
-    grid-column-start: 4;
-    grid-row-start: 4;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    gap: 0px;
-
-   max-width: fit-content;
-   max-height: fit-content;
-   border: 1px solid #B8CAD1;
-   justify-self: center;   
-   padding: 0;
-   margin: 0;
-}
-
-.listing-7{
-   grid-column: span 3 / span 3;
-    grid-row: span 3 / span 3;
-    grid-column-start: 7;
-    grid-row-start: 4;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    gap: 0px;
-
-   max-width: fit-content;
-   max-height: fit-content;
-   border: 1px solid #B8CAD1;
-   justify-self: center;   
-   padding: 0;
-   margin: 0;
-}
-
-.listing-8{
-   grid-column: span 3 / span 3;
-    grid-row: span 3 / span 3;
-    grid-column-start: 10;
-    grid-row-start: 4;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    gap: 0px;
-
-   max-width: fit-content;
-   max-height: fit-content;
-   border: 1px solid #B8CAD1;
-   justify-self: center;   
-   padding: 0;
-   margin: 0;
-}
-*/
 
 
 #footer-1{
@@ -1227,18 +1185,9 @@ footer{
   background-color: #031E49;
 }
 
-
-
-
-
-.parent {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    gap: 8px;
-}
     
-.div7 {
+.listing-1{
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
 
@@ -1253,7 +1202,8 @@ footer{
    margin: 0;
 }
 
-.div8 {
+.listing-2 {
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-column-start: 4;
@@ -1269,7 +1219,8 @@ footer{
    margin: 0;
 }
 
-.div9 {
+.listing-3 {
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-column-start: 7;
@@ -1285,7 +1236,8 @@ footer{
    margin: 0;
 }
 
-.div10 {
+.listing-4 {
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-column-start: 10;
@@ -1301,7 +1253,8 @@ footer{
    margin: 0;
 }
 
-.div11 {
+.listing-5 {
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-row-start: 4;
@@ -1317,7 +1270,8 @@ footer{
    margin: 0;
 }
 
-.div12 {
+.listing-6 {
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-column-start: 4;
@@ -1334,7 +1288,8 @@ footer{
    margin: 0;
 }
 
-.div13 {
+.listing-7 {
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-column-start: 7;
@@ -1351,7 +1306,8 @@ footer{
    margin: 0;
 }
 
-.div14 {
+.listing-8 {
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-column-start: 10;
@@ -1368,7 +1324,8 @@ footer{
    margin: 0;
 }
 
-.div15 {
+.listing-9 {
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-row-start: 7;
@@ -1384,12 +1341,13 @@ footer{
    margin: 0;
 }
 
-.div16 {
+.listing-10 {
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-column-start: 4;
     grid-row-start: 7;
-    
+  
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(12, 1fr);
@@ -1401,7 +1359,8 @@ footer{
    margin: 0;
 }
 
-.div17 {
+.listing-11 {
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-column-start: 7;
@@ -1418,7 +1377,8 @@ footer{
    margin: 0;
 }
 
-.div18 {
+.listing-12 {
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-column-start: 10;
@@ -1435,7 +1395,8 @@ footer{
    margin: 0;
 }
 
-.div19 {
+.listing-13 {
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-row-start: 10;
@@ -1451,7 +1412,8 @@ footer{
    margin: 0;
 }
 
-.div20 {
+.listing-14 {
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-column-start: 4;
@@ -1468,7 +1430,8 @@ footer{
    margin: 0;
 }
 
-.div21 {
+.listing-15 {
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-column-start: 7;
@@ -1485,7 +1448,8 @@ footer{
    margin: 0;
 }
 
-.div22 {
+.listing-16 {
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-column-start: 10;
